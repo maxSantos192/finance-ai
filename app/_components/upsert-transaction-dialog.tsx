@@ -113,10 +113,12 @@ const UpsertTransactionDialog = ({
       <DialogTrigger asChild></DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>
+          <DialogTitle className="text-center">
             {isUpdate ? "Atualizar transação" : "Adicionar transação"}
           </DialogTitle>
-          <DialogDescription>Insira as informações abaixo</DialogDescription>
+          <DialogDescription className="text-center">
+            Insira as informações abaixo
+          </DialogDescription>
         </DialogHeader>
 
         <Form {...form}>
@@ -248,13 +250,13 @@ const UpsertTransactionDialog = ({
               )}
             />
 
-            <DialogFooter>
+            <DialogFooter className="gap-2 sm:gap-0">
               <DialogClose asChild>
-                <Button type="button" variant="outline">
+                <Button type="button" variant="outline" className="w-full">
                   Cancelar
                 </Button>
               </DialogClose>
-              <Button type="submit">
+              <Button type="submit" className="w-full">
                 {isUpdate ? "Atualizar" : "Adicionar"}
               </Button>
             </DialogFooter>
