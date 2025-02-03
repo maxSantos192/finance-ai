@@ -26,7 +26,7 @@ export const upsertTransaction = async (params: AddTransactionParams) => {
   if (!userId) throw new Error("User not found");
 
   await db.transaction.upsert({
-    where: { id: params.id },
+    where: { id: params?.id ?? "" },
     update: { ...params, userId },
     create: { ...params, userId },
   });
